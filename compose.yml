@@ -6,7 +6,7 @@ services:
     depends_on:
       - devopsdb
 
-  backend:
+  devopsdb:
     image: devopsdb
     ports:
       - "3306:3306"
@@ -20,6 +20,8 @@ services:
         limits:
           cpus: "1"
           memory: "1000M"
+    environment:
+     - MYSQL_ROOT_PASSWORD: "devopspassword"
 
 volumes:
   mydata:
