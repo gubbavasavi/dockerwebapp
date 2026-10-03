@@ -9,7 +9,7 @@ services:
   devopsdb:
     image: dbimage
     ports:
-      - "3306:3306"
+      - "1112:3306"
     volumes:
       - mydata:/var/lib/mysql
     deploy:
