@@ -7,7 +7,7 @@ services:
       - devopsdb
 
   devopsdb:
-    image: devopsdb
+    image: dbimage
     ports:
       - "3306:3306"
     volumes:
