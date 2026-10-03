@@ -21,7 +21,7 @@ services:
           cpus: "1"
           memory: "1000M"
     environment:
-     - MYSQL_ROOT_PASSWORD: "devopspassword"
+     - MYSQL_ROOT_PASSWORD= devopspassword
 
 volumes:
   mydata:
