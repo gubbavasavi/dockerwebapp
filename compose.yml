@@ -3,6 +3,8 @@ services:
     image: vasavigubba/mydocker:practicewebappfrontend
     ports:
       - "1111:8080"
+    deploy:
+     replicas: 2
     networks:
      - mynetwork
     depends_on:
