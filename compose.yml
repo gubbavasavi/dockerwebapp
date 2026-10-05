@@ -3,6 +3,8 @@ services:
     image: vasavigubba/mydocker:practicewebappfrontend
     ports:
       - "1111:8080"
+    networks:
+     - mynetwork
     depends_on:
       - devopsdb
 
@@ -20,9 +22,18 @@ services:
         limits:
           cpus: "1"
           memory: "1000M"
+
+
+    networks:
+     - mynetwork
+
     environment:
      - MYSQL_ROOT_PASSWORD=devopspassword
-     
+
 
 volumes:
   mydata:
+
+networks:
+  mynetwork:
+    driver: overlay
